@@ -1,0 +1,297 @@
+:root {
+  --button-background-color: rgb(30, 30, 30);
+  --button-font-color: antiquewhite;
+  --button-border-color: rgb(62, 11, 0);
+}
+
+body {
+  background-color: aliceblue;
+}
+
+header {
+  display: flex;
+  margin-top: 10rem;
+}
+
+.open-desk-configurator-button {
+  background-color: var(--button-background-color);
+  color: var(--button-font-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-color: var(--button-border-color);
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-page-desk-configurator {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: FadeIn 0.3s ease;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.desk {
+  background-image: url();
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+  align-self: center;
+  margin: auto;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 0.8rem;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.desk.transition {
+  height: 0rem;
+  width: 0rem;
+}
+
+.deskpad {
+  background-color: var(--button-font-color);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.deskpad.transition {
+  height: 0rem;
+  width: 0rem;
+}
+
+.deskpad:hover {
+  cursor: pointer;
+}
+
+.deskpad:active {
+  cursor: grabbing;
+}
+
+.configurator-container {
+  background-color: rgb(230, 230, 230);
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  width: 22rem;
+  height: 32rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border: 0.3rem solid var(--button-border-color);
+  border-radius: 0.5rem;
+  border-top: 1rem solid var(--button-border-color);
+  overflow: hidden;
+  transition: height 0.3s ease, width 0.3s ease;
+}
+
+.configurator-container.close-open-config-anim {
+  height: 2rem;
+  width: 4.5rem;
+}
+
+.configurator-container h2 {
+  color: var(--button-border-color);
+  display: flex;
+  align-self: center;
+}
+
+.open-close-config-button-container {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.open-close-config-button-container button {
+  background-color: rgb(230, 230, 230);
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border: 0.3rem solid var(--button-border-color);
+  border-radius: 0.5rem;
+}
+
+.open-close-config-button-container button:hover {
+  border-color: rgb(146, 27, 0);
+  cursor: pointer;
+}
+
+#config-button {
+  display: none;
+}
+
+#config-button.hidden {
+  display: block;
+}
+
+.close-main-page-desk-configurator {
+  background-color: rgb(230, 230, 230);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border: 0.3rem solid var(--button-border-color);
+  border-radius: 0.5rem;
+}
+
+.close-main-page-desk-configurator:hover {
+  border-color: rgb(146, 27, 0);
+  cursor: pointer;
+}
+
+.deskpad-form {
+  width: 20rem;
+  margin: 0.5rem auto;
+}
+
+select {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.3rem solid var(--button-border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+select option {
+  font-size: 1rem;
+}
+
+select:hover {
+  border-color: rgb(146, 27, 0);
+}
+
+select:focus {
+  outline: none;
+  border-color: rgb(215, 39, 0);
+  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
+}
+
+/* Style the select dropdown arrow (in some browsers) */
+select::-ms-expand {
+  display: none;
+}
+
+/* Style the select dropdown arrow (in Firefox) */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* Style the select dropdown arrow (in Chrome and Safari) */
+select::-webkit-outer-spin-button,
+select::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Style the select dropdown arrow (in Safari) */
+select[type="number"]::-webkit-outer-spin-button,
+select[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-field-deskpad-config {
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  border: 0.3rem solid var(--button-border-color);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.input-field-deskpad-config:hover {
+  border-color: rgb(146, 27, 0);
+}
+
+.input-field-deskpad-config:focus {
+  outline: none;
+  border-color: rgb(215, 39, 0);
+  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
+}
+
+.apply-button-deskpad-config {
+  border-radius: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  margin: 0 auto;
+  border: 0.3rem solid var(--button-border-color);
+  font-size: 1.2rem;
+}
+
+.apply-button-deskpad-config:hover {
+  border-color: rgb(146, 27, 0);
+  cursor: pointer;
+}
+
+.apply-button-deskpad-config:focus {
+  border-color: rgb(215, 39, 0);
+  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
+}
+
+/* Desk images */
+.desk-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.desk-options button {
+  background-image: url("");
+  background-size: cover;
+  border: 0.3rem solid var(--button-border-color);
+  border-radius: 0.5rem;
+  height: 4rem;
+  width: 6rem;
+  margin: 0.5rem;
+}
+
+.desk-options button:hover {
+  border-color: rgb(146, 27, 0);
+  cursor: pointer;
+}
+
+.desk-options button:focus {
+  border-color: rgb(215, 39, 0);
+  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
+}
+
+/* Removes up and down arrows inside input box */
+#desk-width::-webkit-inner-spin-button,
+#desk-width::-webkit-outer-spin-button,
+#desk-height::-webkit-inner-spin-button,
+#desk-height::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

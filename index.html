@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Desk pad picker</title>
+</head>
+<body>
+    <header>
+        <button class="open-desk-configurator-button" onclick="ToggleMainPage()">
+            Desk Pad Configurator
+        </button>
+    </header>
+    <section class="main-page-desk-configurator" id="main-page-desk-config">
+        <!--Page close button-->
+        <button class="close-main-page-desk-configurator" onclick="ToggleMainPage()">X</button>
+        <!--Desk section-->
+        <div class="desk">
+        </div>
+        <!--Deskpad section-->
+        <div class="deskpad" title="Press and hold to move."></div>
+        <!--Configurator section-->
+        <div class="configurator-container">
+            <div class="open-close-config-button-container">
+                <button id="config-button" class="close-main-page-desk-configurator-nav" onclick="ToggleConfiguratorPage('menu')">=</button>
+                <button class="close-main-page-desk-configurator-nav" onclick="ToggleConfiguratorPage('close')">X</button>
+            </div>
+            <h2 id="deskpad-name">Deskpad name</h2>
+            <form class="deskpad-form" id="choose-deskpad-form">
+                <select id="choose-deskpad" name="choose-deskpad">
+                </select>
+            </form>
+            <form class="deskpad-form" id="choose-units-form">
+                <select id="choose-units" name="choose-units">
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="in">inch</option>
+                </select>
+            </form>
+            <h2 class="desk-size-text">Desk size:</h2>
+            <input type="number" id="desk-width" class="input-field-deskpad-config" value="" placeholder="width">
+            <input type="number" id="desk-height" class="input-field-deskpad-config" value="" placeholder="height">
+            <button class="apply-button-deskpad-config" onclick="ApplyOptions()">Apply</button>
+            <!--Desk options-->
+            <div class="desk-options">
+            </div>
+        </div>
+    </section>
+<script src="./javascript.js"></script>
+</body>
+</html>
