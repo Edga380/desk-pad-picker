@@ -178,9 +178,10 @@ function AddDeskPads() {
 }
 
 // Toggle main page display:flex/none
-function ToggleMainPage() {
+function ToggleMainPage(index) {
   if (mainPage.style.display === "none" || mainPage.style.display === "") {
     mainPage.style.display = "flex";
+    deskpadIndex = index;
   } else {
     mainPage.style.display = "none";
   }

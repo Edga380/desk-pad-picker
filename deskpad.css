@@ -1,31 +1,28 @@
 :root {
-  --button-background-color: rgb(30, 30, 30);
-  --button-font-color: antiquewhite;
-  --button-border-color: rgb(62, 11, 0);
-}
-
-body {
-  background-color: aliceblue;
-}
-
-header {
-  display: flex;
-  margin-top: 10rem;
+  --open-config-button-background-color: rgb(30, 30, 30);
+  --open-config-button-font-color: antiquewhite;
+  --border-color: rgb(62, 11, 0);
+  --configurator-bg-color: rgba(0, 0, 0, 0.6);
+  --configurator-container-bg-color: rgb(230, 230, 230);
+  --config-buttons-bg-color: rgb(230, 230, 230);
+  --hover-border-color: rgb(146, 27, 0);
+  --focus-border-color: rgb(215, 39, 0);
+  --focus-border-box-shadow-color: rgb(255, 47, 0);
 }
 
 .open-desk-configurator-button {
-  background-color: var(--button-background-color);
-  color: var(--button-font-color);
+  background-color: var(--open-config-button-background-color);
+  color: var(--open-config-button-font-color);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-color: var(--button-border-color);
+  border-color: var(--border-color);
   font-size: 1.2rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .main-page-desk-configurator {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--configurator-bg-color);
   display: none;
   position: absolute;
   overflow: hidden;
@@ -64,7 +61,6 @@ header {
 }
 
 .deskpad {
-  background-color: var(--button-font-color);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -91,7 +87,7 @@ header {
 }
 
 .configurator-container {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--configurator-container-bg-color);
   position: absolute;
   right: 2rem;
   display: flex;
@@ -100,9 +96,9 @@ header {
   width: 22rem;
   height: 32rem;
   padding: 1rem 1rem 2rem 1rem;
-  border: 0.3rem solid var(--button-border-color);
+  border: 0.3rem solid var(--border-color);
   border-radius: 0.5rem;
-  border-top: 1rem solid var(--button-border-color);
+  border-top: 1rem solid var(--border-color);
   overflow: hidden;
   transition: height 0.3s ease, width 0.3s ease;
 }
@@ -113,7 +109,7 @@ header {
 }
 
 .configurator-container h2 {
-  color: var(--button-border-color);
+  color: var(--border-color);
   display: flex;
   align-self: center;
 }
@@ -125,17 +121,17 @@ header {
 }
 
 .open-close-config-button-container button {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--config-buttons-bg-color);
   width: 2rem;
   height: 2rem;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  border: 0.3rem solid var(--button-border-color);
+  border: 0.3rem solid var(--border-color);
   border-radius: 0.5rem;
 }
 
 .open-close-config-button-container button:hover {
-  border-color: rgb(146, 27, 0);
+  border-color: var(--hover-border-color);
   cursor: pointer;
 }
 
@@ -148,7 +144,7 @@ header {
 }
 
 .close-main-page-desk-configurator {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--config-buttons-bg-color);
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -157,12 +153,12 @@ header {
   margin-left: auto;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  border: 0.3rem solid var(--button-border-color);
+  border: 0.3rem solid var(--border-color);
   border-radius: 0.5rem;
 }
 
 .close-main-page-desk-configurator:hover {
-  border-color: rgb(146, 27, 0);
+  border-color: var(--hover-border-color);
   cursor: pointer;
 }
 
@@ -172,10 +168,10 @@ header {
 }
 
 select {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--config-buttons-bg-color);
   width: 100%;
   padding: 0.5rem;
-  border: 0.3rem solid var(--button-border-color);
+  border: 0.3rem solid var(--border-color);
   border-radius: 0.5rem;
   font-size: 1rem;
 }
@@ -185,13 +181,90 @@ select option {
 }
 
 select:hover {
-  border-color: rgb(146, 27, 0);
+  border-color: var(--hover-border-color);
 }
 
 select:focus {
   outline: none;
-  border-color: rgb(215, 39, 0);
-  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 0.2rem var(--focus-border-box-shadow-color);
+}
+
+.input-field-deskpad-config {
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  border: 0.3rem solid var(--border-color);
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.input-field-deskpad-config:hover {
+  border-color: var(--hover-border-color);
+}
+
+.input-field-deskpad-config:focus {
+  outline: none;
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 0.2rem var(--focus-border-box-shadow-color);
+}
+
+.apply-button-deskpad-config {
+  border-radius: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  margin: 0 auto;
+  border: 0.3rem solid var(--border-color);
+  font-size: 1.2rem;
+}
+
+.apply-button-deskpad-config:hover {
+  border-color: var(--hover-border-color);
+  cursor: pointer;
+}
+
+.apply-button-deskpad-config:focus {
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 0.2rem var(--focus-border-box-shadow-color);
+}
+
+/* Desk images */
+.desk-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.desk-options button {
+  background-image: url("");
+  background-size: cover;
+  border: 0.3rem solid var(--border-color);
+  border-radius: 0.5rem;
+  height: 4rem;
+  width: 6rem;
+  margin: 0.5rem;
+}
+
+.desk-options button:hover {
+  border-color: var(--hover-border-color);
+  cursor: pointer;
+}
+
+.desk-options button:focus {
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 0.2rem var(--focus-border-box-shadow-color);
+}
+
+/* Removes up and down arrows inside input box */
+#desk-width::-webkit-inner-spin-button,
+#desk-width::-webkit-outer-spin-button,
+#desk-height::-webkit-inner-spin-button,
+#desk-height::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Style the select dropdown arrow (in some browsers) */
@@ -215,83 +288,6 @@ select::-webkit-inner-spin-button {
 /* Style the select dropdown arrow (in Safari) */
 select[type="number"]::-webkit-outer-spin-button,
 select[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.input-field-deskpad-config {
-  border-radius: 0.5rem;
-  width: 10rem;
-  height: 2rem;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  border: 0.3rem solid var(--button-border-color);
-  font-size: 1rem;
-  line-height: 2rem;
-}
-
-.input-field-deskpad-config:hover {
-  border-color: rgb(146, 27, 0);
-}
-
-.input-field-deskpad-config:focus {
-  outline: none;
-  border-color: rgb(215, 39, 0);
-  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
-}
-
-.apply-button-deskpad-config {
-  border-radius: 0.5rem;
-  width: 8rem;
-  height: 2rem;
-  margin: 0 auto;
-  border: 0.3rem solid var(--button-border-color);
-  font-size: 1.2rem;
-}
-
-.apply-button-deskpad-config:hover {
-  border-color: rgb(146, 27, 0);
-  cursor: pointer;
-}
-
-.apply-button-deskpad-config:focus {
-  border-color: rgb(215, 39, 0);
-  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
-}
-
-/* Desk images */
-.desk-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.desk-options button {
-  background-image: url("");
-  background-size: cover;
-  border: 0.3rem solid var(--button-border-color);
-  border-radius: 0.5rem;
-  height: 4rem;
-  width: 6rem;
-  margin: 0.5rem;
-}
-
-.desk-options button:hover {
-  border-color: rgb(146, 27, 0);
-  cursor: pointer;
-}
-
-.desk-options button:focus {
-  border-color: rgb(215, 39, 0);
-  box-shadow: 0 0 0.2rem rgb(255, 47, 0);
-}
-
-/* Removes up and down arrows inside input box */
-#desk-width::-webkit-inner-spin-button,
-#desk-width::-webkit-outer-spin-button,
-#desk-height::-webkit-inner-spin-button,
-#desk-height::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
